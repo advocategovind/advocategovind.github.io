@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advocate Govind J. Prajapati | High Court & Legal Consultant</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              goldHover: '#C59B27',
+              goldLight: '#F5E6BE',
+              dark: '#0A0E17',
+              navy: '#111827',
+              cardDark: '#161F30'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FBF0B9 0%, #D4AF37 50%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-black pb-16 lg:pb-0">
+
+  <!-- ================= BAR COUNCIL OF INDIA DISCLAIMER MODAL ================= -->
+  <div id="disclaimer-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
+    <div class="bg-[#121824] border border-brand-gold/40 rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative text-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-brand-gold text-2xl">
+        <i class="fa-solid fa-scale-balanced"></i>
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-white mb-2 tracking-wide">Disclaimer & Confirmation</h3>
+      <div class="text-xs text-slate-400 space-y-3 text-left max-h-56 overflow-y-auto pr-2 mb-6 border-y border-slate-800 py-3 leading-relaxed">
+        <p>As per the rules of the <strong>Bar Council of India</strong>, advocates are prohibited from soliciting work or advertising in any manner. By clicking <strong>"I Agree"</strong> below, the user acknowledges the following:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>There has been no advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever from Advocate Govind J. Prajapati or his associates.</li>
+          <li>The user wishes to gain information about the advocate's practice areas solely for their own information and personal knowledge.</li>
+          <li>The information provided on this website does not constitute formal legal advice and does not create an advocate-client relationship.</li>
+        </ul>
+      </div>
+      <button onclick="acceptDisclaimer()" class="w-full sm:w-auto px-8 py-3 bg-brand-gold hover:bg-brand-goldHover text-black font-semibold rounded-lg transition-all shadow-lg hover:shadow-brand-gold/20 uppercase tracking-wider text-xs">
+        I Agree & Proceed
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= TOP CONTACT BAR ================= -->
+  <div class="bg-black/90 border-b border-slate-800 text-xs py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-4 sm:space-x-6 text-slate-300 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-brand-gold"></i> Jogeshwari (W), Mumbai
+        </span>
+        <a href="mailto:advgovindprajapati@gmail.com" class="hidden sm:flex items-center gap-1.5 hover:text-brand-gold transition">
+          <i class="fa-solid fa-envelope text-brand-gold"></i> advgovindprajapati@gmail.com
+        </a>
+      </div>
+      <div class="flex items-center space-x-3 text-[11px] sm:text-xs ml-auto sm:ml-0">
+        <a href="tel:+918104174519" class="text-brand-gold font-bold hover:underline flex items-center gap-1.5">
+          <i class="fa-solid fa-phone"></i> +91 81041 74519
+        </a>
+        <a href="https://wa.me/918104174519?text=Hello%20Advocate%20Govind%20Prajapati,%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." target="_blank" class="hidden sm:inline-flex bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-0.5 rounded text-[11px] font-semibold items-center gap-1 transition">
+          <i class="fa-brands fa-whatsapp text-xs"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= RESPONSIVE NAVIGATION BAR ================= -->
+  <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-brand-gold/60 flex items-center justify-center bg-brand-gold/10 text-brand-gold text-lg sm:text-xl flex-shrink-0">
+          <i class="fa-solid fa-scale-unbalanced-flip"></i>
+        </div>
+        <div>
+          <span class="font-serif font-bold text-base sm:text-xl tracking-wider text-white block leading-tight">GOVIND J. PRAJAPATI</span>
+          <span class="text-[10px] sm:text-[11px] font-medium tracking-widest text-brand-gold uppercase block">Advocate High Court • BLS/LL.B</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+        <a href="#home" class="hover:text-brand-gold transition">Home</a>
+        <a href="#about" class="hover:text-brand-gold transition">About</a>
+        <a href="#services" class="hover:text-brand-gold transition">Practice Areas</a>
+        <a href="#focus" class="hover:text-brand-gold transition">Litigation Focus</a>
+        <a href="#why-us" class="hover:text-brand-gold transition">Why Us</a>
+        <a href="#contact" class="hover:text-brand-gold transition">Chamber</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="#contact" class="hidden lg:inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-gold to-yellow-600 text-black font-semibold text-xs tracking-wider uppercase rounded-md hover:brightness-110 transition shadow-md">
+        <i class="fa-solid fa-calendar-check"></i> Book Consultation
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-brand-gold focus:outline-none text-xl" aria-label="Toggle navigation menu">
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Slide-down Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900/98 border-b border-slate-800 px-6 py-5 space-y-4">
+      <a href="#home" onclick="toggleMobileMenu()" class="block text-slate-200 hover:text-brand-gold font-medium text-sm transition">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-200 hover:text-brand-gold font-medium text-sm transition">About Advocate</a>
+      <a href="#services" onclick="toggleMobileMenu()" class="block text-slate-200 hover:text-brand-gold font-medium text-sm transition">Practice Areas</a>
+      <a href="#focus" onclick="toggleMobileMenu()" class="block text-slate-200 hover:text-brand-gold font-medium text-sm transition">Litigation Focus</a>
+      <a href="#why-us" onclick="toggleMobileMenu()" class="block text-slate-200 hover:text-brand-gold font-medium text-sm transition">Why Choose Us</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-200 hover:text-brand-gold font-medium text-sm transition">Chamber & Contact</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="w-full text-center block py-2.5 bg-brand-gold text-black font-bold text-xs uppercase tracking-wider rounded-lg shadow">
+        Book Appointment
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="relative pt-10 pb-16 sm:pt-14 sm:pb-20 lg:py-24 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-80 sm:w-96 h-80 sm:h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Hero Details -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5 text-brand-gold text-xs font-semibold tracking-wide">
+            <i class="fa-solid fa-gavel"></i> Bombay High Court & Subordinate Courts
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl font-bold leading-tight text-white">
+            Committed to Justice. <br/>
+            <span class="gold-gradient-text">Dedicated to Your Legal Rights.</span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-light mx-auto lg:mx-0">
+            Comprehensive trial advocacy, criminal defense, strategic property dispute advisory, and precision legal drafting across Mumbai courts.
+          </p>
+
+          <div class="p-4 rounded-xl border border-brand-gold/30 bg-slate-900/70 max-w-xl mx-auto lg:mx-0">
+            <p class="font-serif italic text-sm sm:text-base text-brand-goldLight text-center lg:text-left">
+              "Your Trust, Our Commitment — Justice, Our Mission"
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+            <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 bg-brand-gold hover:bg-brand-goldHover text-black font-bold text-xs uppercase tracking-wider rounded-lg shadow-lg transition text-center">
+              Schedule An Appointment
+            </a>
+            <a href="tel:+918104174519" class="w-full sm:w-auto px-7 py-3.5 border border-slate-700 hover:border-brand-gold text-white font-medium text-xs rounded-lg transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-phone-volume text-brand-gold"></i> Direct Line
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-3 gap-3 pt-6 border-t border-slate-800 text-center">
+            <div>
+              <p class="font-serif text-xl sm:text-2xl font-bold text-brand-gold">BLS / LL.B</p>
+              <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Legal Credentials</p>
+            </div>
+            <div>
+              <p class="font-serif text-xl sm:text-2xl font-bold text-brand-gold">High Court</p>
+              <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">& District Courts</p>
+            </div>
+            <div>
+              <p class="font-serif text-xl sm:text-2xl font-bold text-brand-gold">100%</p>
+              <p class="text-[11px] sm:text-xs text-slate-400 mt-0.5">Confidential Counsel</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Photo Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-xs sm:max-w-sm">
+            <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-gold/40 via-transparent to-brand-gold/20 rounded-2xl blur-sm"></div>
+            
+            <div class="relative bg-brand-cardDark border border-brand-gold/40 rounded-2xl overflow-hidden shadow-2xl">
+              <div class="relative aspect-[4/5] overflow-hidden bg-slate-900">
+                <img 
+                  src="advocate.jpg" 
+                  alt="Advocate Govind J. Prajapati" 
+                  class="w-full h-full object-cover object-top filter contrast-105"
+                  id="advocate-portrait"
+                  onerror="this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=900'"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+              </div>
+
+              <div class="p-5 text-center -mt-10 relative z-10">
+                <span class="inline-block bg-brand-gold text-black font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-1.5 shadow">
+                  Advocate High Court
+                </span>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide">Govind J. Prajapati</h3>
+                <p class="text-xs text-brand-gold font-medium mt-0.5">BLS / LL.B • Legal Consultant</p>
+                <p class="text-[11px] text-slate-400 mt-2 flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-location-dot text-brand-gold"></i> Jogeshwari (W), Mumbai
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-14 sm:py-16 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-5 text-center md:text-left">
+          <p class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-2">Professional Profile</p>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Integrity, Diligence & Diligent Legal Advocacy</h2>
+          <div class="w-16 h-1 bg-brand-gold mb-4 mx-auto md:mx-0"></div>
+        </div>
+        <div class="md:col-span-7 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p>
+            <strong>Advocate Govind J. Prajapati (BLS / LL.B)</strong> is an established legal practitioner and consultant practicing before the High Court of Bombay, City Civil & Sessions Courts, Family Courts, and key statutory redevelopment authorities across Maharashtra.
+          </p>
+          <p>
+            The practice handles civil suits, bail and criminal defense, commercial litigations, matrimonial disputes, property title drafting, and redevelopment matters (SRA/MHADA/BMC), founded on deep procedural preparation and uncompromising ethics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRACTICE AREAS / SERVICES ================= -->
+  <section id="services" class="py-16 sm:py-20 bg-slate-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <p class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-2">Comprehensive Legal Solutions</p>
+        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white mb-3">Our Practice Areas & Services</h2>
+        <div class="w-20 h-1 bg-brand-gold mx-auto mb-4"></div>
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Specialized legal representation and drafting solutions matching statutory frameworks across Maharashtra.
+        </p>
+      </div>
+
+      <!-- 12 Services Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+
+        <!-- 1. Civil & Criminal Matters -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-gavel"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Civil & Criminal Matters</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Representation in original civil suits, recovery proceedings, title injunctions, FIR quashing, magistrate trials, and Sessions defenses.
+          </p>
+        </div>
+
+        <!-- 2. Bail & Anticipatory Bail -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-handcuffs"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Bail & Anticipatory Bail</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Urgent legal intervention for Regular Bail, Anticipatory Bail applications under Section 438/482 CrPC before Sessions & High Court.
+          </p>
+        </div>
+
+        <!-- 3. Cheque Bounce / Sec 138 N.I. Act -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-money-check-dollar"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Cheque Bounce (Sec 138 N.I. Act)</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Statutory legal notice drafting, filing of summary complaint cases, trial defense, and debt recovery proceedings.
+          </p>
+        </div>
+
+        <!-- 4. Matrimonial & Family Court -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-people-roof"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Matrimonial & Family Court</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Mutual consent divorce, contested petitions, child custody rights, restitution of conjugal rights, and structured family mediation.
+          </p>
+        </div>
+
+        <!-- 5. Domestic Violence & Maintenance -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Domestic Violence & Maintenance</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Protection and Residence orders under the DV Act along with statutory maintenance claims under Section 125 CrPC.
+          </p>
+        </div>
+
+        <!-- 6. SRA, MHADA, MMRDA, CIDCO & BMC -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-building-flag"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">SRA, MHADA, MMRDA & BMC</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Redevelopment disputes, transit rent default claims, eligibility appeals before High Power Committees, and municipal legal actions.
+          </p>
+        </div>
+
+        <!-- 7. Agreements & Contracts -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-file-signature"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Agreements & Legal Contracts</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Commercial contracts, Sale Deeds, MOUs, Joint Venture accords, Vendor agreements, and non-disclosure covenants.
+          </p>
+        </div>
+
+        <!-- 8. Legal Notices & Drafting -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-feather-pointed"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Legal Notices & Drafting</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Issuance of statutory notices, replies to recovery demands, rejoinders, writ petitions, and specialized affidavits.
+          </p>
+        </div>
+
+        <!-- 9. Online Leave & Licence -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-laptop-file"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Online Leave & Licence</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Government e-registration for residential and commercial rent agreements with complete biometric execution.
+          </p>
+        </div>
+
+        <!-- 10. Will & Testamentary Documents -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-scroll"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Will & Testamentary Documents</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Drafting of Last Wills, Codicils, Probate petitions, Letters of Administration, and Succession Certificates.
+          </p>
+        </div>
+
+        <!-- 11. Gift Deed & Partnership Deed -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Gift Deed & Partnership Deed</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Execution and registration of property Gift Deeds, Partnership Formations, Dissolution deeds, and LLP documentation.
+          </p>
+        </div>
+
+        <!-- 12. Domicile & Gazette Services -->
+        <div class="p-6 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-gold/50 transition duration-300 hover:-translate-y-1">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-stamp"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base sm:text-lg text-white mb-2">Domicile & Gazette Services</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Maharashtra Official Gazette name-change publications, Domicile certifications, affidavits, and document verification.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRACTICE TRACK RECORD & FOCUS ================= -->
+  <section id="focus" class="py-16 bg-slate-900/40 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-1">Litigation & Strategic Advisory</p>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Core Litigation Focus</h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mb-3"></div>
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Procedural rigor across High Court appellate benches, Sessions trials, and statutory revenue tribunals.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-brand-gold/40 transition">
+          <span class="text-brand-gold text-xs font-bold uppercase tracking-wider block mb-2">Criminal Defense</span>
+          <h4 class="text-white font-serif font-bold text-base mb-2">Bail Jurisprudence & Quashing</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Urgent representation in Anticipatory Bails (Sec 438 CrPC), Regular Bails, trial discharge applications, and Sec 482 quashing petitions before the High Court.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-brand-gold/40 transition">
+          <span class="text-brand-gold text-xs font-bold uppercase tracking-wider block mb-2">Real Estate & Property</span>
+          <h4 class="text-white font-serif font-bold text-base mb-2">SRA / MHADA Redevelopment Rights</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Protection of tenant/occupant eligibility rights, transit rent execution, developer dispute resolution, and society conveyance matters.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-brand-gold/40 transition">
+          <span class="text-brand-gold text-xs font-bold uppercase tracking-wider block mb-2">Commercial & Civil</span>
+          <h4 class="text-white font-serif font-bold text-base mb-2">Sec 138 N.I. Act & Recovery Suits</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            End-to-end prosecution and defense under Negotiable Instruments Act, summary recovery suits (Order 37 CPC), and specific performance litigations.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section id="why-us" class="py-14 bg-slate-900/60 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex-shrink-0 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-white text-base mb-1">Absolute Confidentiality</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Every client disclosure and case detail is protected under strict attorney-client legal privilege.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex-shrink-0 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-white text-base mb-1">In-Depth Case Scrutiny</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Thorough statutory analysis and precedent evaluation to build solid and outcome-focused legal roadmaps.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-lg bg-brand-gold/10 border border-brand-gold/30 text-brand-gold flex-shrink-0 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-hand-holding-hand"></i>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-white text-base mb-1">Transparent Advisory</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Realistic assessments without false assurances, prioritizing your legal security and long-term interest.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / APPOINTMENT SECTION ================= -->
+  <section id="contact" class="py-16 sm:py-20 bg-slate-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+        
+        <!-- Chamber Info & Google Maps Embed -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <p class="text-brand-gold text-xs font-semibold tracking-widest uppercase mb-1">Get In Touch</p>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">Chamber & Consultation</h2>
+            <div class="w-16 h-1 bg-brand-gold mt-3 mb-4"></div>
+            <p class="text-slate-400 text-xs sm:text-sm">
+              In-person consultations are scheduled <strong>by prior appointment only</strong> to ensure dedicated attention to your matter.
+            </p>
+          </div>
+
+          <div class="space-y-3.5">
+            <!-- Office Address -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="text-sm">
+                <p class="font-bold text-white text-xs sm:text-sm">Office Address</p>
+                <p class="text-slate-300 mt-1 text-xs sm:text-sm leading-relaxed">
+                  Shop 14, R-3, Gulshan Nagar,<br/>
+                  Near Ghaswala Dairy, Jogeshwari (West),<br/>
+                  Mumbai – 400102, Maharashtra.
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="text-sm">
+                <p class="font-bold text-white text-xs sm:text-sm">Email Consultation</p>
+                <a href="mailto:advgovindprajapati@gmail.com" class="text-brand-gold hover:underline font-semibold block mt-0.5 text-sm break-all">
+                  advgovindprajapati@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-lg bg-brand-gold/10 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="text-sm">
+                <p class="font-bold text-white text-xs sm:text-sm">Direct Line</p>
+                <a href="tel:+918104174519" class="text-brand-gold hover:underline font-semibold block mt-0.5 text-sm">
+                  +91 81041 74519
+                </a>
+                <p class="text-slate-400 text-[11px] mt-0.5">Prior Appointment Required</p>
+              </div>
+            </div>
+
+            <!-- Interactive Google Maps Embed -->
+            <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-900/60 shadow-lg">
+              <div class="p-2.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+                <span class="text-xs font-semibold text-white flex items-center gap-1.5">
+                  <i class="fa-solid fa-map-location-dot text-brand-gold"></i> Find Chamber On Maps
+                </span>
+                <a 
+                  href="https://maps.google.com/?q=Gulshan+Nagar+Jogeshwari+West+Mumbai" 
+                  target="_blank" 
+                  class="text-[11px] text-brand-gold hover:underline font-medium"
+                >
+                  Open in Google Maps →
+                </a>
+              </div>
+              <iframe 
+                title="Advocate Govind Prajapati Chamber Location"
+                src="https://maps.google.com/maps?q=Gulshan+Nagar,+Jogeshwari+West,+Mumbai,+Maharashtra+400102&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                class="w-full h-44 sm:h-52 border-0 filter contrast-125 opacity-90 hover:opacity-100 transition duration-300"
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <!-- Direct WhatsApp Link -->
+            <a href="https://wa.me/918104174519?text=Hello%20Advocate%20Govind%20Prajapati,%20I%20would%20like%20to%20consult%20regarding:" target="_blank" class="w-full flex items-center justify-center gap-2 p-3.5 bg-[#25D366]/15 border border-[#25D366]/40 hover:bg-[#25D366]/25 text-emerald-400 font-semibold rounded-xl text-xs sm:text-sm transition">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Direct Consultation via WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Appointment Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-8 shadow-xl">
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-1.5">Request Consultation</h3>
+            <p class="text-xs text-slate-400 mb-5">Fill in your details and choose your preferred channel to send the request directly.</p>
+
+            <form id="appointment-form" onsubmit="handleUnifiedSubmit(event)" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Full Name *</label>
+                  <input type="text" id="client_name" required placeholder="e.g. Ramesh Sharma" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-brand-gold transition" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Phone Number *</label>
+                  <input type="tel" id="client_phone" required placeholder="e.g. +91 98765 43210" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-brand-gold transition" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Practice Category *</label>
+                  <select id="case_type" required class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-brand-gold transition">
+                    <option value="Civil & Criminal Matter">Civil & Criminal Matters</option>
+                    <option value="Bail & Anticipatory Bail">Bail & Anticipatory Bail</option>
+                    <option value="Cheque Bounce (Sec 138)">Cheque Bounce (Sec 138 N.I. Act)</option>
+                    <option value="Family & Matrimonial Court">Matrimonial & Family Court</option>
+                    <option value="Domestic Violence & Maintenance">Domestic Violence & Maintenance</option>
+                    <option value="SRA / MHADA / BMC Property">SRA • MHADA • BMC Matters</option>
+                    <option value="Legal Agreement / Drafting">Agreements & Legal Drafting</option>
+                    <option value="Leave & Licence">Online Leave & Licence</option>
+                    <option value="Will & Testamentary Documents">Will & Testamentary Documents</option>
+                    <option value="Gift & Partnership Deed">Gift Deed & Partnership Deed</option>
+                    <option value="Domicile & Gazette Services">Domicile & Gazette Services</option>
+                    <option value="Other Legal Advisory">Other Legal Advisory</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Preferred Date</label>
+                  <input type="date" id="pref_date" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-slate-300 focus:outline-none focus:border-brand-gold transition" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-1">Brief Description of Matter</label>
+                <textarea id="case_desc" rows="3" placeholder="Briefly state your dispute or documentation requirement..." class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-brand-gold transition"></textarea>
+              </div>
+
+              <!-- Direct WhatsApp & Gmail Action Buttons -->
+              <div class="grid sm:grid-cols-2 gap-3 pt-2">
+                <button type="button" onclick="sendViaWhatsApp()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition shadow-md flex items-center justify-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-base"></i> Send on WhatsApp
+                </button>
+                <button type="button" onclick="sendViaGmail()" class="w-full py-3 bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition shadow-md flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-envelope-open-text text-base"></i> Send via Gmail / Email
+                </button>
+              </div>
+
+              <!-- Unified Fallback Submit Button -->
+              <button type="submit" class="w-full py-3 bg-brand-gold hover:bg-brand-goldHover text-black font-bold text-xs uppercase tracking-wider rounded-lg transition shadow-lg flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i> Send Request (All-in-One)
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black border-t border-slate-800 text-slate-400 text-xs py-10 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      
+      <div class="space-y-2">
+        <p class="font-serif font-bold text-white text-base">Govind J. Prajapati</p>
+        <p class="text-brand-gold text-xs font-medium">Advocate High Court & Legal Consultant</p>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          BLS/LL.B advocate practicing in Mumbai, Maharashtra with ethical representation standards.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-white font-semibold mb-2.5 uppercase tracking-wider text-xs">Primary Practices</p>
+        <ul class="space-y-1 text-slate-400 text-xs">
+          <li>Civil & Criminal Litigation</li>
+          <li>Bail & Anticipatory Bail</li>
+          <li>Cheque Bounce (N.I. Act)</li>
+          <li>Family & Matrimonial Court</li>
+          <li>SRA, MHADA & BMC Disputes</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-white font-semibold mb-2.5 uppercase tracking-wider text-xs">Documentation</p>
+        <ul class="space-y-1 text-slate-400 text-xs">
+          <li>Online Leave & Licence</li>
+          <li>Will & Testamentary Drafting</li>
+          <li>Gift & Partnership Deeds</li>
+          <li>Legal Notices & Contracts</li>
+          <li>Domicile & Gazette Services</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-white font-semibold mb-2.5 uppercase tracking-wider text-xs">Chamber Address</p>
+        <p class="text-slate-400 leading-relaxed text-xs">
+          Shop 14, R-3, Gulshan Nagar, Near Ghaswala Dairy, Jogeshwari (W), Mumbai – 400102.
+        </p>
+        <p class="mt-2 text-white font-semibold text-xs">
+          Email: <a href="mailto:advgovindprajapati@gmail.com" class="text-brand-gold">advgovindprajapati@gmail.com</a>
+        </p>
+        <p class="mt-1 text-white font-semibold text-xs">
+          Phone: <a href="tel:+918104174519" class="text-brand-gold">+91 81041 74519</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left text-[11px]">
+      <p>© 2026 Advocate Govind J. Prajapati. All Rights Reserved.</p>
+      <p class="text-slate-500">Compliant with Bar Council of India Website Disclaimers.</p>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE STICKY CONTACT BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-2.5 px-4 grid grid-cols-2 gap-3 shadow-2xl">
+    <a href="tel:+918104174519" class="flex items-center justify-center gap-2 py-2.5 bg-slate-800 hover:bg-slate-700 text-brand-gold font-semibold text-xs rounded-lg border border-brand-gold/30">
+      <i class="fa-solid fa-phone"></i> Call Chamber
+    </a>
+    <a href="https://wa.me/918104174519?text=Hello%20Advocate%20Govind%20Prajapati,%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." target="_blank" class="flex items-center justify-center gap-2 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs rounded-lg shadow">
+      <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+    </a>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    function acceptDisclaimer() {
+      document.getElementById('disclaimer-modal').style.display = 'none';
+      sessionStorage.setItem('bci_disclaimer_accepted', 'true');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (sessionStorage.getItem('bci_disclaimer_accepted') === 'true') {
+        document.getElementById('disclaimer-modal').style.display = 'none';
+      }
+    });
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        menu.classList.add('hidden');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    function getFormData() {
+      const name = document.getElementById('client_name').value.trim();
+      const phone = document.getElementById('client_phone').value.trim();
+      const type = document.getElementById('case_type').value;
+      const date = document.getElementById('pref_date').value || 'Earliest Available';
+      const desc = document.getElementById('case_desc').value.trim() || 'No specific details provided.';
+
+      if (!name || !phone) {
+        alert('Please fill in your Name and Phone Number.');
+        return null;
+      }
+      return { name, phone, type, date, desc };
+    }
+
+    // 1. Direct WhatsApp Dispatch
+    function sendViaWhatsApp() {
+      const data = getFormData();
+      if (!data) return;
+
+      const waText = `*Legal Consultation Request*%0A%0A*Name:* ${encodeURIComponent(data.name)}%0A*Phone:* ${encodeURIComponent(data.phone)}%0A*Practice Area:* ${encodeURIComponent(data.type)}%0A*Preferred Date:* ${encodeURIComponent(data.date)}%0A*Matter Description:* ${encodeURIComponent(data.desc)}`;
+      window.open(`https://wa.me/918104174519?text=${waText}`, '_blank');
+    }
+
+    // 2. Direct Gmail Web & Native Email Client Dispatch
+    function sendViaGmail() {
+      const data = getFormData();
+      if (!data) return;
+
+      const subject = `Legal Appointment Request: ${data.name} - ${data.type}`;
+      const body = `Respected Advocate Govind Prajapati,\n\nI would like to schedule a legal consultation with you. Here are the details of the matter:\n\n• Full Name: ${data.name}\n• Phone Number: ${data.phone}\n• Legal Practice Area: ${data.type}\n• Preferred Date: ${data.date}\n• Description of the Matter: ${data.desc}\n\nKindly confirm the appointment slot.\n\nThank you,\n${data.name}`;
+
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=advgovindprajapati@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      const newTab = window.open(gmailUrl, '_blank');
+      if (!newTab || newTab.closed || typeof newTab.closed === 'undefined') {
+        window.location.href = `mailto:advgovindprajapati@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+    }
+
+    // 3. Unified All-in-One Form Trigger
+    function handleUnifiedSubmit(e) {
+      e.preventDefault();
+      sendViaWhatsApp();
+      sendViaGmail();
+    }
+  </script>
+</body>
+</html>
