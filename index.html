@@ -7,6 +7,14 @@
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="VvCOXsKhBWQuaoDV1piPLyck6UXlCiu76HJYkY48d8A" />
 
+  <!-- Canonical URL (Essential for Google Favicon & Snippet Indexing) -->
+  <link rel="canonical" href="https://advocategovind.github.io/" />
+
+  <!-- Official Site Logo / Favicon (Replaces Globe Icon on Google Search) -->
+  <link rel="icon" type="image/jpeg" href="advocate.jpg" />
+  <link rel="shortcut icon" type="image/jpeg" href="advocate.jpg" />
+  <link rel="apple-touch-icon" href="advocate.jpg" />
+
   <!-- Primary SEO Meta Tags -->
   <title>Advocate Govind J. Prajapati | High Court & Legal Consultant Mumbai</title>
   <meta name="title" content="Advocate Govind J. Prajapati | High Court & Legal Consultant Mumbai" />
@@ -18,6 +26,7 @@
 
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://advocategovind.github.io/" />
   <meta property="og:title" content="Advocate Govind J. Prajapati | High Court & Legal Consultant" />
   <meta property="og:description" content="High Court Advocate & Legal Consultant in Jogeshwari West, Mumbai. Expert legal advisory for Bail, Property Disputes (SRA/MHADA), Criminal Defense, and Documentation." />
   <meta property="og:image" content="advocate.jpg" />
@@ -36,7 +45,7 @@
     "name": "Advocate Govind J. Prajapati",
     "alternateName": "Adv Govind Prajapati",
     "description": "High Court Advocate and Legal Consultant offering comprehensive litigation, bail defense, property dispute advisory, and legal drafting services in Mumbai.",
-    "image": "advocate.jpg",
+    "image": "https://advocategovind.github.io/advocate.jpg",
     "telephone": "+918104174519",
     "email": "advgovindprajapati@gmail.com",
     "url": "https://advocategovind.github.io",
@@ -173,10 +182,18 @@
   <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
       
-      <!-- Brand Logo & Name -->
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-brand-gold/60 flex items-center justify-center bg-brand-gold/10 text-brand-gold text-lg sm:text-xl flex-shrink-0">
-          <i class="fa-solid fa-scale-unbalanced-flip"></i>
+      <!-- Brand Logo / Portrait & Name -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-11 h-11 rounded-full border-2 border-brand-gold/70 overflow-hidden flex-shrink-0 shadow-md group-hover:border-brand-gold transition duration-200">
+          <img 
+            src="advocate.jpg" 
+            alt="Advocate Govind J. Prajapati" 
+            class="w-full h-full object-cover object-top"
+            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+          />
+          <div class="hidden w-full h-full flex items-center justify-center bg-brand-gold/10 text-brand-gold text-lg">
+            <i class="fa-solid fa-scale-unbalanced-flip"></i>
+          </div>
         </div>
         <div>
           <span class="font-serif font-bold text-base sm:text-xl tracking-wider text-white block leading-tight">GOVIND J. PRAJAPATI</span>
